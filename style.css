@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css?family=Electrolize|Lobster|Poppins|Teko:300,400&display=swap");
+/* #21ebff; */
+
+/* header area */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 1000px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.6s;
+  background: black;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: #323233;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.356);
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Lobster";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  padding: 5px 10px;
+  margin: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Electrolize";
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+}
+
+/* header .sticky .logo,
+header.sticky ul li a {
+  color: #4d4343;
+} */
+
+header ul li a:hover {
+  animation: animate 8s linear infinite;
+}
+
+header ul li a::before {
+  content: "";
+  position: relative;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+header ul li a:hover::before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+/* header end */
+
+/* home */
+
+#home {
+  padding: 150px 100px 100px;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.block {
+  color: #e4d9d9;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #ca2121;
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding-left: 35px;
+  border-left: 3px solid #420a0a;
+  margin-top: 10px;
+}
+.block h1 {
+  color: #e4d9d9;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  text-shadow: 1px 2px #f10909;
+}
+
+.intro {
+  display: flex;
+}
+/* home end */
+/* about */
+.sec {
+  position: relative;
+  background: #fff;
+  padding: 150px 100px 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec .content {
+  position: relative text;
+  text-align: center;
+  width: 100%;
+}
+.mxw800p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.sec .flex {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sec img {
+  max-width: 150px;
+  margin-left: 0;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  font-family: "Electrolize";
+}
+p {
+  position: relative;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Poppins";
+  margin: 30px;
+  letter-spacing: 1px;
+}
+
+/* #about */
+/* portfolio */
+.portfolio {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 100px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.portfolio .workBox {
+  width: 225px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .workBox .imgBx {
+  margin-top: 25px;
+}
+.portfolio .workBox .imgBx img {
+  max-width: 70px;
+  margin-bottom: 15px;
+}
+.portfolio .workBox h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.portfolio .workBox p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.portfolio .work_content {
+  position: relative text;
+  text-align: center;
+  width: 100%;
+}
+/* #portfolio */
+
+/* services */
+.services {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 30px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.services .box {
+  width: 225px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.services .box .iconBx {
+  margin-top: 25px;
+}
+.services .box .iconBx img {
+  max-width: 70px;
+  margin-bottom: 15px;
+}
+
+.services .box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.services .box p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+/* #services */
+/* contact */
+.contact {
+  background: #000000;
+}
+.contact h3,
+.contact p {
+  color: #fff;
+}
+.contactForm {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+.contactForm form {
+  width: 100%;
+}
+
+.contactForm .row100 {
+  display: flex;
+  width: 100%;
+}
+
+.contactForm .row100 .inputBx50 {
+  width: 50%;
+  margin: 0 20px;
+}
+.contactForm .row100 .inputBx100 {
+  width: 100%;
+  margin: 0 20px;
+}
+.contactForm .row100 input,
+.contactForm .row100 textarea {
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+  resize: none;
+}
+
+.contactForm .row100 textarea {
+  height: 100px;
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contactForm .row100 input[type="submit"] {
+  background: #fff;
+  color: #000000;
+  max-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.sci ul {
+  display: flex;
+}
+.sci ul li {
+  list-style: none;
+}
+
+.sci ul li a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+.sci ul li a img {
+  width: 40px;
+  height: 30px;
+}
+
+.sci ul li a:hover img {
+  opacity: 0.5;
+}
+
+.copyright a {
+  color: #fff;
+}
+/* #contact */
+
+.toggle {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .toggle::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    z-index: 1;
+    box-shadow: 0 10px 0 #000000;
+    transition: 0.5s;
+  }
+  .toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    z-index: 1;
+    transition: 0.5s;
+  }
+}
