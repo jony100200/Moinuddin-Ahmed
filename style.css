@@ -210,7 +210,6 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
   gap: 100px;
   max-width: 100%;
   margin-top: 40px;
@@ -255,7 +254,7 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-  gap: 30px;
+  gap: 100px;
   max-width: 100%;
   margin-top: 40px;
 }
