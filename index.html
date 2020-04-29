@@ -146,7 +146,7 @@
       </div>
     </section>
     <!-- Blog -->
-    <section class="sec" id="blog">
+    <section class="sec blog" id="blog">
       <div class="content">
         <div class="mxw800p">
           <h3>What I Am Blogging?</h3>
@@ -154,7 +154,11 @@
             I love to write and record my progress in my blog. You can follow
             the link below to find out more.
           </p>
-          <a href="#">Read More</a>
+          <div class="botam">
+            <a href="https://kalponicblog.wordpress.com/" target="_blank"
+              >Read More</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -233,6 +237,24 @@
         </p>
       </div>
     </section>
+    <script type="text/javascript">
+      const botam = document.querySelectorAll("a");
+      botam.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
+
+          let ripples = document.createElement("span");
+          ripples.style.left = x + "px";
+          ripples.style.top = y + "px";
+          this.appendChild(ripples);
+
+          setTimeout(() => {
+            ripples.remove();
+          }, 1000);
+        });
+      });
+    </script>
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
